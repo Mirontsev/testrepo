@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE Nodes [
+
+<!ENTITY % NameValue "CDATA">
+<!ENTITY % PropType "(I|S|D|L|H|B)">
+<!ENTITY % VersionValue "CDATA">
+
+<!ELEMENT Prp (#PCDATA)>
+<!ELEMENT Node (Node|Prp)*>
+<!ELEMENT Nodes (Node)+>
+
+<!ATTLIST Nodes version CDATA "1">
+
+<!ATTLIST Node name CDATA #REQUIRED>
+
+<!ATTLIST Prp name CDATA #REQUIRED>
+<!ATTLIST Prp type CDATA #REQUIRED>
+<!ATTLIST Prp value CDATA #REQUIRED>
+]>
+<Nodes version="1">
+	<Node name="root">
+		<Node name="{167df010-5409-45af-bbb1-c59a2730b6ce}"/>
+		<Node name="{24b6fa0b-0143-461a-9758-aeb9e9a9428b}">
+			<Prp name="activity" type="S" value="{1B9702BB-7436-481F-8EC4-7EA541A4136D}"/>
+		</Node>
+		<Node name="{ad15e706-6678-496b-b1e9-d449218ec403}">
+			<Node name="unassigned">
+				<Prp name="capture_count" type="I" value="0"/>
+				<Prp name="column" type="I" value="0"/>
+				<Prp name="description" type="S" value=""/>
+				<Prp name="line" type="I" value="0"/>
+				<Prp name="owner" type="S" value="{00000000-0000-0000-0000-000000000000}"/>
+			</Node>
+		</Node>
+		<Node name="{efe64bdc-8547-43f1-a389-d7d475ec1d09}">
+			<Node name="workspace"/>
+		</Node>
+		<Node name="analysis">
+			<Prp name="key" type="S" value="{D47A9287-D328-4796-A9ED-7E806D78D964}"/>
+		</Node>
+		<Node name="child list">
+			<Node name="item0000000000">
+				<Node name="item data">
+					<Prp name="relpath" type="S" value="VBScript\Hello_VBScript.mds"/>
+				</Node>
+				<Prp name="index" type="I" value="0"/>
+				<Prp name="key" type="S" value="{1152F62F-B947-4DB7-B90B-645F184151EB}"/>
+				<Prp name="pluginname" type="S" value=""/>
+				<Prp name="type" type="S" value="{362A8EE5-675E-43A9-869D-06ECE80B0CB4}"/>
+				<Prp name="typename" type="S" value="Project"/>
+			</Node>
+			<Node name="item0000000001">
+				<Node name="item data">
+					<Prp name="relpath" type="S" value="JScript\Hello_JScript.mds"/>
+				</Node>
+				<Prp name="index" type="I" value="1"/>
+				<Prp name="key" type="S" value="{DB17A9FF-2B05-4DBE-8D4F-01A2DCBC35EA}"/>
+				<Prp name="pluginname" type="S" value=""/>
+				<Prp name="type" type="S" value="{362A8EE5-675E-43A9-869D-06ECE80B0CB4}"/>
+				<Prp name="typename" type="S" value="Project"/>
+			</Node>
+			<Node name="item0000000002">
+				<Node name="item data">
+					<Prp name="relpath" type="S" value="DelphiScript\Hello_DelphiScript.mds"/>
+				</Node>
+				<Prp name="index" type="I" value="2"/>
+				<Prp name="key" type="S" value="{7324913D-9E95-4E13-A9DC-ED2BF5021157}"/>
+				<Prp name="pluginname" type="S" value=""/>
+				<Prp name="type" type="S" value="{362A8EE5-675E-43A9-869D-06ECE80B0CB4}"/>
+				<Prp name="typename" type="S" value="Project"/>
+			</Node>
+			<Node name="item0000000003">
+				<Node name="item data">
+					<Prp name="relpath" type="S" value="C++Script\Hello_C++Script.mds"/>
+				</Node>
+				<Prp name="index" type="I" value="3"/>
+				<Prp name="key" type="S" value="{B6F5E355-A4C0-4C79-A244-DADB5647A5C6}"/>
+				<Prp name="pluginname" type="S" value=""/>
+				<Prp name="type" type="S" value="{362A8EE5-675E-43A9-869D-06ECE80B0CB4}"/>
+				<Prp name="typename" type="S" value="Project"/>
+			</Node>
+			<Node name="item0000000004">
+				<Node name="item data">
+					<Prp name="relpath" type="S" value="C#Script\Hello_C#Script.mds"/>
+				</Node>
+				<Prp name="index" type="I" value="4"/>
+				<Prp name="key" type="S" value="{39119B78-E8F8-4E2C-AB15-DE4E9340B544}"/>
+				<Prp name="pluginname" type="S" value=""/>
+				<Prp name="type" type="S" value="{362A8EE5-675E-43A9-869D-06ECE80B0CB4}"/>
+				<Prp name="typename" type="S" value="Project"/>
+			</Node>
+		</Node>
+		<Node name="files">
+			<Node name="c#script\hello_c#script.mds">
+				<Prp name="relpath" type="S" value="C#Script\Hello_C#Script.mds"/>
+			</Node>
+			<Node name="c++script\hello_c++script.mds">
+				<Prp name="relpath" type="S" value="C++Script\Hello_C++Script.mds"/>
+			</Node>
+			<Node name="delphiscript\hello_delphiscript.mds">
+				<Prp name="relpath" type="S" value="DelphiScript\Hello_DelphiScript.mds"/>
+			</Node>
+			<Node name="jscript\hello_jscript.mds">
+				<Prp name="relpath" type="S" value="JScript\Hello_JScript.mds"/>
+			</Node>
+			<Node name="vbscript\hello_vbscript.mds">
+				<Prp name="relpath" type="S" value="VBScript\Hello_VBScript.mds"/>
+			</Node>
+		</Node>
+		<Node name="folders">
+			<Node name="folders"/>
+		</Node>
+		<Node name="scc"/>
+		<Node name="settings">
+			<Node name="{5a85e200-b5d2-4f74-972a-0221f2956a19}">
+				<Prp name="type" type="I" value="5"/>
+				<Prp name="value" type="S" value="Log"/>
+			</Node>
+			<Prp name="key" type="S" value="{D46F87C8-BFE8-48A0-BCC4-C08E0F4D805E}"/>
+			<Prp name="settingsversion" type="S" value="10.0"/>
+		</Node>
+		<Node name="test data">
+			<Node name="child list">
+				<Node name="item0000000000">
+					<Prp name="description" type="S" value=""/>
+					<Prp name="enabled" type="B" value="-1"/>
+					<Prp name="index" type="I" value="0"/>
+					<Prp name="key" type="S" value="{1152F62F-B947-4DB7-B90B-645F184151EB}"/>
+					<Prp name="stoponerror" type="B" value="0"/>
+					<Prp name="timeout" type="I" value="0"/>
+				</Node>
+				<Node name="item0000000001">
+					<Prp name="description" type="S" value=""/>
+					<Prp name="enabled" type="B" value="-1"/>
+					<Prp name="index" type="I" value="1"/>
+					<Prp name="key" type="S" value="{DB17A9FF-2B05-4DBE-8D4F-01A2DCBC35EA}"/>
+					<Prp name="stoponerror" type="B" value="-1"/>
+					<Prp name="timeout" type="I" value="0"/>
+				</Node>
+				<Node name="item0000000002">
+					<Prp name="description" type="S" value=""/>
+					<Prp name="enabled" type="B" value="-1"/>
+					<Prp name="index" type="I" value="2"/>
+					<Prp name="key" type="S" value="{7324913D-9E95-4E13-A9DC-ED2BF5021157}"/>
+					<Prp name="stoponerror" type="B" value="-1"/>
+					<Prp name="timeout" type="I" value="0"/>
+				</Node>
+				<Node name="item0000000003">
+					<Prp name="description" type="S" value=""/>
+					<Prp name="enabled" type="B" value="-1"/>
+					<Prp name="index" type="I" value="3"/>
+					<Prp name="key" type="S" value="{B6F5E355-A4C0-4C79-A244-DADB5647A5C6}"/>
+					<Prp name="stoponerror" type="B" value="-1"/>
+					<Prp name="timeout" type="I" value="0"/>
+				</Node>
+				<Node name="item0000000004">
+					<Prp name="description" type="S" value=""/>
+					<Prp name="enabled" type="B" value="-1"/>
+					<Prp name="index" type="I" value="4"/>
+					<Prp name="key" type="S" value="{39119B78-E8F8-4E2C-AB15-DE4E9340B544}"/>
+					<Prp name="stoponerror" type="B" value="-1"/>
+					<Prp name="timeout" type="I" value="0"/>
+				</Node>
+			</Node>
+			<Prp name="key" type="S" value="{AD7B208C-216E-4669-BE6A-F386429935D9}"/>
+		</Node>
+		<Node name="variables">
+			<Prp name="key" type="S" value="{80801D59-BC5F-419F-B819-3A98F4C4E280}"/>
+			<Prp name="version" type="I" value="1"/>
+		</Node>
+		<Prp name="key" type="S" value="{466F5C12-5F6A-4E1F-A871-B5F9E2953D77}"/>
+		<Prp name="signature" type="S" value="{24B6FA0B-0143-461A-9758-AEB9E9A9428B}"/>
+		<Prp name="version" type="S" value="10.0"/>
+	</Node>
+</Nodes>
