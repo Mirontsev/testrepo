@@ -1,0 +1,242 @@
+'  The example demonstrates the main operations that can be executed over objects: 
+'  clicks, dragging, key presses.
+'  The sample works only under the English version of Windows.
+
+sub DrawString(wMain, x, y, strDraw, strFontName)
+  set wPicture = wMain.Window("AfxFrameOrView*", "", 1).Window("Afx*:8", "")
+  call wPicture.Drag(x, y, 100, 100)
+  
+  set wFonts = wMain.Parent.Window("Afx*", "Fonts").Window("#*", "")
+  if (not wFonts.Exists or not wFonts.VisibleOnScreen) then
+	call wMain.MainMenu.Check("View|Text Toolbar", true)
+  end if
+	
+	Set wndFonts = wMain.Parent.WaitWindow("Afx*:8*", "Fonts")
+	if (wndFonts.Exists) then
+  	Call wndFonts.Position(60, 40, wndFonts.Width, wndFonts.Height)
+	end if
+
+  If wFonts.Window("ComboBox", "", 1).wText <> strFontName Then 
+    call wFonts.Window("ComboBox", "", 1).ClickItem(strFontName)
+  End If
+  If wFonts.Window("ComboBox", "", 2).wText <> "72" Then 
+    call wFonts.Window("ComboBox", "", 2).ClickItem("72")
+  End If
+  
+  call wPicture.Window("AfxWnd*", "").Window("Edit").Keys(strDraw)
+  call wPicture.Click(x - 5, y - 5)
+end sub
+
+Sub DrawString_w7(wPicture, wRibbon, x, y, strDraw, strFontName)
+  Dim wPropertyPage, wToolBar, wEdit
+  Call wPicture.Click(x, y)
+  Set wPropertyPage = wRibbon.Pane("Lower Ribbon").Client(0).PropertyPage("Text")
+  Set wToolBar = wPropertyPage.ToolBar("Font")
+  
+  If (wToolBar.ComboBox("Font family").Edit("*").Text <> strFontName) Then
+    Call wToolBar.ComboBox("Font family").Button("Open").Click(7, 9)
+    Call wToolBar.ComboBox("Font family").Button("Close").Click(7, 9)
+    Set wEdit = wPicture.Parent.Parent.Window("UIRibbonCommandBarDock", "UIRibbonDockTop").Window("UIRibbonCommandBar", "Ribbon").Window("UIRibbonWorkPane", "Ribbon").Window("NUIPane").PropertyPage("Ribbon").Window("NetUICtrlNotifySink", "", 1).Window("RICHEDIT50W")
+    Call wEdit.Click
+    wEdit.wText = strFontName
+    Call wEdit.Keys("[Enter]")
+  End If
+  If (wToolBar.ComboBox("Font size").Edit("*").Text <> "72") Then
+    Call wToolBar.ComboBox("Font size").Button("Open").Click(8, 9)
+    Call wToolBar.ComboBox("Font size").Button("Close").Click(7, 9)
+    Set wEdit = wPicture.Parent.Parent.Window("UIRibbonCommandBarDock", "UIRibbonDockTop").Window("UIRibbonCommandBar", "Ribbon").Window("UIRibbonWorkPane", "Ribbon").Window("NUIPane").PropertyPage("Ribbon").Window("NetUICtrlNotifySink", "", 2).Window("RICHEDIT50W")
+    Call wEdit.Click
+    wEdit.wText = "72"  
+    Call wEdit.Keys("[Enter]")
+  End If
+    
+  Set wToolBar = wPropertyPage.ToolBar("Background")
+  Call wToolBar.Button("Transparent").ClickButton
+  
+  Call wPicture.Window("AfxWnd42u").Window("RICHEDIT50W").Keys(strDraw)  
+  Call wPicture.Click(x - 15, y)
+End Sub
+
+Sub SetColor(Paint, r, g, b, w7)
+  Dim dlgEditColors
+
+  If w7 Then
+    Call Paint.Window("MSPaintApp", "*").Window("UIRibbonCommandBarDock", "UIRibbonDockTop").Window("UIRibbonCommandBar", "Ribbon").Window("UIRibbonWorkPane", "Ribbon").Window("NUIPane").PropertyPage("Ribbon").Pane("Lower Ribbon").Client(0).PropertyPage("Home").ToolBar("Colors").Button("Edit colors").ClickButton
+  Else 
+    Call Paint.Window("MSPaintApp", "*").MainMenu.Click("Colors|Edit Colors...")
+  End If
+    
+  Set dlgEditColors = Paint.Window("#32770", "Edit Colors")
+  If (dlgEditColors.Window("Button", "&Define Custom Colors >>").Enabled) Then  
+    Call dlgEditColors.Window("Button", "&Define Custom Colors >>").ClickButton
+  End If
+  dlgEditColors.Window("Edit", "", 4).wText = r
+  dlgEditColors.Window("Edit", "", 5).wText = g
+  dlgEditColors.Window("Edit", "", 6).wText = b
+  Call dlgEditColors.Window("Button", "OK").ClickButton
+End Sub
+
+Sub Hello_w7(mspaint)
+  Dim wMain, wRibbon, wDialog, wColors, wTools, wPicture, strFontName
+
+  strFontName = "Arial"
+  Set wMain   = mspaint.WaitWindow("MSPaintApp", "*", 1, 5000)
+
+  ' Create a new image 800x600
+  Call wMain.Maximize
+  Set wRibbon = wMain.Window("UIRibbonCommandBarDock", "UIRibbonDockTop").Window("UIRibbonCommandBar", "Ribbon").Window("UIRibbonWorkPane", "Ribbon").Window("NUIPane").PropertyPage("Ribbon")
+  Call wRibbon.Button(1).GridDropDownButton("Application menu").Click
+  Call mspaint.Window("Net UI Tool Window Layered").Window("NetUIHWND").Pane(0).Client(0).Grouping(0).MenuItem("New").Click
+
+  Set wDialog = mspaint.WaitWindow("#*", "*", 1, 2000)
+  If (wDialog.Exists) Then
+    Call wDialog.Keys("n")
+  End If
+  
+  Call wRibbon.Button(1).GridDropDownButton("Application menu").Click
+  Call mspaint.Window("Net UI Tool Window Layered").Window("NetUIHWND").Pane(0).Client(0).Grouping(3).MenuItem("Properties").Click
+  Set wDialog = mspaint.Window("#32770", "Image Properties")
+  Call wDialog.Window("Button", "&Pixels").ClickButton
+  Call wDialog.Window("Button", "Co&lor").ClickButton
+  wDialog.Window("Edit", "", 1).wText = 800
+  wDialog.Window("Edit", "", 2).wText = 600
+  Call wDialog.Window("Button", "OK").ClickButton
+   
+  Set wColors = wRibbon.Pane("Lower Ribbon").Client(0).PropertyPage("Home").ToolBar("Colors").Grouping(0)
+  Set wTools = wRibbon.Pane("Lower Ribbon").Client(0).PropertyPage("Home").ToolBar("Tools")
+  Set wPicture = wMain.Window("MSPaintView").Window("Afx:*:8")
+  
+  ' Background color
+  Call SetColor(mspaint, 0, 0, 0, true)
+  Call wTools.Button("Fill with color").ClickButton       
+  Call wPicture.Click(10, 10)
+
+  ' Choose "Text"
+  Call wTools.Button("Text").ClickButton       
+
+  ' Shade for T - E - S - T
+  Call SetColor(mspaint, 100, 100, 100, true)
+  Call DrawString_w7(wPicture, wRibbon, 152, 152, " ", strFontName) ' Enlarge the edit box after changing the font size
+  Call DrawString_w7(wPicture, wRibbon, 152, 152, "T", strFontName)
+  Call DrawString_w7(wPicture, wRibbon, 252, 152, "E", strFontName)
+  Call DrawString_w7(wPicture, wRibbon, 352, 152, "S", strFontName)
+  Call DrawString_w7(wPicture, wRibbon, 452, 152, "T", strFontName)
+  
+  ' T - E - S - T
+  Call SetColor(mspaint, 255, 0, 0, true)
+  Call DrawString_w7(wPicture, wRibbon, 150, 150, "T", strFontName)
+  Call SetColor(mspaint, 0, 255, 0, true)
+  Call DrawString_w7(wPicture, wRibbon, 250, 150, "E", strFontName)
+  Call SetColor(mspaint, 0, 0, 255, true)
+  Call DrawString_w7(wPicture, wRibbon, 350, 150, "S", strFontName)
+  Call SetColor(mspaint, 255, 0, 255, true)
+  Call DrawString_w7(wPicture, wRibbon, 450, 150, "T", strFontName)
+End Sub
+
+Sub Hello(mspaint)
+  strOSName = Sys.OSInfo.Name
+  bIsWinNT = (strOsName = "WinNT")
+	bIsWin2K = (strOsName = "Win2000")
+  bIsWinXP = (strOSName = "WinXP")
+	bHasToolChild = bIsWin2K
+  strFontName = "Arial"
+	
+	Set wndFonts = mspaint.WaitWindow("Afx*:8*", "Fonts")
+	if (wndFonts.Exists) then
+  	Call wndFonts.Position(60, 40, wndFonts.Width, wndFonts.Height)
+	end if
+  
+  set wMain   = mspaint.WaitWindow("MSPaintApp", "*", 1, 5000)
+  set wColors = wMain.Window("AfxControlBar*", "Colors").Window("AfxWnd*", "Colors")
+  set wTools  = wMain.Window("AfxControlBar*", "Tools").Window("AfxWnd*", "Tools")
+
+  ' Create a new image 800x600
+  call wMain.Activate
+  call wMain.Maximize
+  call wMain.MainMenu.Check("View|Tool Box", true)
+  call wMain.MainMenu.Check("View|Color Box", true)
+   
+  call wMain.MainMenu.Click("File|New")
+  set wndFonts = mspaint.WaitWindow("#*", "*", 1, 1000)
+  if (wndFonts.Exists) then
+    call wndFonts.Keys("n")
+  end if
+  	
+  call wMain.MainMenu.Click("Image|Attributes...")
+  set wndFonts = mspaint.WaitWindow("#*", "Attributes", 1, 2000)
+  if bIsWinNT then
+    call wndFonts.Window("Button", "&Pels").ClickButton
+  else
+    call wndFonts.Window("Button", "&Pixels").ClickButton
+  end if
+  call wndFonts.Window("Button", "Co&lors").ClickButton
+  wndFonts.Window("Edit", "", 1).wText = "800"
+  wndFonts.Window("Edit", "", 2).wText = "600"
+  call wndFonts.Window("Button", "OK").ClickButton
+
+  ' Background color
+  Call SetColor(mspaint, 0, 0, 0, false)
+  
+  if bHasToolChild then
+      call wTools.Window("ToolChild", "", 4).Click(13, 12)
+  else
+      call wTools.Click(43, 36)
+  end if	  
+  
+  call wMain.Window("AfxFrameOrView*", "", 1).Window("Afx*:8", "").Click(10, 10)
+  
+  ' Choose "Text"
+  if bHasToolChild then
+      call wTools.Window("ToolChild", "", 10).Click(10, 9)
+  else
+      call wTools.Click(43, 110) 
+  end if
+  	  
+  call wTools.Click(25, 252)
+  
+  ' Shade for T - E - S - T
+  Call SetColor(mspaint, 100, 100, 100, false)
+  call DrawString(wMain, 150, 150, " ", strFontName) ' Enlarge the edit box after changing the font size
+  
+  call DrawString(wMain, 152, 152, "T", strFontName)
+  call DrawString(wMain, 252, 152, "E", strFontName)
+  call DrawString(wMain, 352, 152, "S", strFontName)
+  call DrawString(wMain, 452, 152, "T", strFontName)
+
+  ' T - E - S - T
+  Call SetColor(mspaint, 255, 0, 0, false)
+  call DrawString(wMain, 150, 150, "T", strFontName)
+  Call SetColor(mspaint, 0, 255, 0, false)
+  call DrawString(wMain, 250, 150, "E", strFontName)
+  Call SetColor(mspaint, 0, 0, 255, false)
+  call DrawString(wMain, 350, 150, "S", strFontName)
+  Call SetColor(mspaint, 255, 0, 255, false)
+  call DrawString(wMain, 450, 150, "T", strFontName)
+end sub 
+
+Sub Main
+  Dim mspaint, OsVersion
+
+  ' Run the tested application
+  TestedApps.mspaint_NT.Run
+  Set mspaint = Sys.WaitProcess("mspaint", 5000)
+
+  If (Not mspaint.Exists) Then
+    call Log.Error("The ""MSPaint"" process was not found.", _
+      "Make sure the path was specified correctly in the list of tested applications.")
+	  Exit Sub
+  End If 
+  
+  OsVersion = aqConvert.StrToInt(aqString.GetChar(Sys.OSInfo.Version, 0) + aqString.GetChar(Sys.OSInfo.Version, 2))
+  If (OsVersion > 60) Then
+    Call Hello_w7(mspaint)
+  Else
+    Call Hello(mspaint)
+  End If
+  
+  Call mspaint.Close
+  Call Sys.Keys("n")
+	While (mspaint.exists) 
+    Call sleep(500)
+  Wend    
+End Sub

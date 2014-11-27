@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Root Signature="{B9D9273E-7266-43E0-BF02-97F168593604}" Version="9.0">
+	<TestData Description="" Key="{A93F328F-9814-43A2-BED3-C8C30D7D1161}" Type="{79147B28-EE20-4294-B773-1D3787FBF37B}">
+		<Data>
+			<Extenders>
+				<NodeBitmaps>
+					<Bitmap Name="Aliases.mspaint.wndMSPaintApp.MSPaintView" Data="61717A697000000001000000420200007801859131128320104525B9405A8B8C6D0A2B8E406FE325525050A4B0C0C193C41C857358999B905D58412293F00787F13DBE3BA3E8C4A9F24BC0F306FB429BC1E98C84381EE31AABEA0DB08117CDF82F6D5D4E776D6BBCBBF4EB106207FBC0CC6A96469A7BE24FC919676845431919B90E0C39676870061D2AE33A50EC0979E59C66C0264B2DDB7DA7E9FBBE23CD9AB8D3EB16EAC196C827A731E44463C727E79DDCF8E207E3C0F706CC5AE099B1F1A52F27F0DFFFF70377D1F855" />
+					<Bitmap Name="Aliases.mspaint.wndMSPaintApp" Data="61717A69700000000100000042020000780173F275626200032720A901C40250CC0864318364A0F220261CD430303C004ACA0305E46B2885D3BC7424B14388C9D3BCEE57DF2F07C1FDE5FB8BF717EFCB9F975F975D97AE2389248FA2627FF1BCFC79D968F250153053E6E523E4FF57036D0041B02D301530F9E95EFFEBFF5743D520A980C9EFF003CA63510193BF19049647A880DA83218FA60226BFD76DAFDB5CA75ABB18331B2319AD3FAA7714EFC882E04CA8FFF7BAC907FFF7FBEF75DFEBBEDB7EA7F976F3ECEAACEACCE28C10F2101380665881CDD09351FB033683D29803E90700274AE253" />
+					<Bitmap Name="Aliases.mspaint.dlgImageProperties" Data="61717A697000000001000000420200007801859131128320104525B9405A8B8C6D0A2B8E406FE325525050A4B0C0C193C41C857358999B905D58412293F00787F13DBE3BA3E8C4A9F24BC0F306FB429BC1E98C84381EE31AABEA0DB08117CDF82F6D5D4E776D6BBCBBF4EB106207FBC0CC6A96469A7BE24FC919676845431919B90E0C39676870061D2AE33A50EC0979E59C66C0264B2DDB7DA7E9FBBE23CD9AB8D3EB16EAC196C827A731E44463C727E79DDCF8E207E3C0F706CC5AE099B1F1A52F27F0DFFFF70377D1F855" />
+					<Bitmap Name="Sys.Process(&quot;mspaint&quot;)" Data="61717A69700000000100000042020000780173F275626200032720A901C40250CC0864318364A0F220261CD430303C004ACA0305FED7130FA5FCC3B46E3AC1D42BD54158D6C1E57AD2C120F60CA3DA6469FF72A35F7E201E0358DE3A5CDA7B5FB6B437485F3950BE36BE36FEA6D32FAFFFF510FD338CF6E5EFCB9E971D133DC32C265CDA7F86D12FAFDAF85F6EBD692E60FD338DEE97F31765145ECB9B973E2FBB5CEF7F7DB8566DFCDC748DA4B4BA33401510798FC2EF79F3B2E7A5FF720B07BAB0367E5EB66A517B5D3A50FE96DDBCECFBE57BF3CBA2CBE341F6CCCB9E9B5E1BBF2F9FA9AAA30E6283B4FFFFEA006F4E6B0EF3F278C3E2655502F9B5C9FBF219AB3AEB202E9CA9B72F7F5AFC33A31766BBB31755F9D53756CD4DDF97AF9EC550B70AEC42901BF665037D5C7DBFDCA07A71957EF9BEFC98E89F5E02F090FA5FFFDBED961D48D7FDEA7BC573D37F79856BFDAF0F0286013204A999A137C3E8961D44746B18B22C3A5BB07C6D5E5F1EBA288CFFB1EC7CD19A22AF2C9F2C98083A2D5C9E9BD70FD40F00F5A528CD" />
+					<Bitmap Name="Aliases.mspaint.wndNetUIToolWindowLayered.popup_menu" Data="61717A69700000000100000042020000780173F275626200032720A901C40250CC0864318364A0F220261CD430303C004ACA0305E46B08411D49ECD057564712A4F766D0FD7208DC5FBEBF1804E7E5CFCBAECBAE4B4797BF5F0E53313F7F5E7E5D365CBE1AA2FF5EB9403A5BBE7B7521D00C900A847C8D9B6DF2DEA05F96C9510BF214EA15AAF7825520E4E3EDF67BD99B498B9E496A4863A856A82F05BB0326FFBFFA5ED07CA7783B1BC9C941CB927CCBB3AB0BC02E41C8CF2F9EEFB5DFEDAFA1747CA6D301AB04F7E75EFB802AE0F2F5FFAB3DABCE577955B9C566DA2D30737077708E48BF8F2C5FBFBE2AB36E51ED8184BEA0042305FB06EFF7C05041D25F1F51AD56C75AC790AB17B7C66B7AF6D66CA36854F97FF5C2D5E7EBF2CAA28AEF5743218AFEFFF55058FD1F265F0D33FF6610760891C71FBF009908E47C" />
+					<Bitmap Name="Aliases.mspaint.wndMSPaintApp.UIRibbonDockTop.Ribbon" Data="61717A69700000000100000042020000780173F275626200032720A901C40250CC0864318364A0F220261CD430303C004ACA0305E46B88813A92E81055D734AFA86CAB74CB6489F8EF7153FC049D7424D1E5ABB3112ABE47C14C83A99AE655935F9D0F53F1234E47725E7E5D36C294695E7B8BE7144355A44B26EB48EE2F9E978F2C3FCD0B1982E4F71723E441F64CF3FA5FFFBFFA3E0896DF2FDF5F8E551E49C5FD72887E985BA779ED2F9E9F3F2FBB2EBD2E3D2E190421F24073C1A6EE75BBE7B5CF6D9E5DAD55AC91AD9EAC96AC969511B2BD7BDD4070AE1350DE0C24FF4735C60C2E8F622FAADBC0EEAE07B91DD9F508BF21FB1BC146C883ECC00D013A02C993" />
+					<Bitmap Name="Aliases.mspaint" Data="61717A69700000000100000042020000780173F275626200032720A901C40250CC0864318364A0F220261CD430303C004ACA0305FED7130FA5FCC3B46E3AC1D42BD54158D6C1E57AD2C120F60CA3DA6469FF72A35F7E201E0358DE3A5CDA7B5FB6B437485F3950BE36BE36FEA6D32FAFFFF510FD338CF6E5EFCB9E971D133DC32C265CDA7F86D12FAFDAF85F6EBD692E60FD338DEE97F31765145ECB9B973E2FBB5CEF7F7DB8566DFCDC748DA4B4BA33401510798FC2EF79F3B2E7A5FF720B07BAB0367E5EB66A517B5D3A50FE96DDBCECFBE57BF3CBA2CBE341F6CCCB9E9B5E1BBF2F9FA9AAA30E6283B4FFFFEA006F4E6B0EF3F278C3E2655502F9B5C9FBF219AB3AEB202E9CA9B72F7F5AFC33A31766BBB31755F9D53756CD4DDF97AF9EC550B70AEC42901BF665037D5C7DBFDCA07A71957EF9BEFC98E89F5E02F090FA5FFFDBED961D48D7FDEA7BC573D37F79856BFDAF0F0286013204A999A137C3E8961D44746B18B22C3A5BB07C6D5E5F1EBA288CFFB1EC7CD19A22AF2C9F2C98083A2D5C9E9BD70FD40F00F5A528CD" />
+					<Bitmap Name="Aliases.mspaint.wndNetUIToolWindowLayered" Data="61717A69700000000100000042020000780173F275626200032720A901C40250CC0864318364A0F220261CD430303C004ACA0305E46B2885D3BC7424B14388C9D3BCEE57DF2F07C1FDE5FB8BF717EFCB9F975F975D97AE2389248FA2627FF1BCFC79D968F250153053E6E523E4FF57036D0041B02D301530F9E95EFFEBFF5743D520A980C9EFF003CA63510193BF19049647A880DA83218FA60226BFD76DAFDB5CA75ABB18331B2319AD3FAA7714EFC882E04CA8FFF7BAC907FFF7FBEF75DFEBBEDB7EA7F976F3ECEAACEACCE28C10F2101380665881CDD09351FB033683D29803E90700274AE253" />
+					<Bitmap Name="Aliases.mspaint.wndMSPaintApp.UIRibbonDockTop.Ribbon.Ribbon" Data="61717A69700000000100000042020000780173F275626200032720A901C40250CC0864318364A0F220261CD430303C004ACA0305E46B88813A92E81055D734AFA86CAB74CB6489F8EF7153FC049D7424D1E5ABB3112ABE47C14C83A99AE655935F9D0F53F1234E47725E7E5D36C294695E7B8BE7144355A44B26EB48EE2F9E978F2C3FCD0B1982E4F71723E441F64CF3FA5FFFBFFA3E0896DF2FDF5F8E551E49C5FD72887E985BA779ED2F9E9F3F2FBB2EBD2E3D2E190421F24073C1A6EE75BBE7B5CF6D9E5DAD55AC91AD9EAC96AC969511B2BD7BDD4070AE1350DE0C24FF4735C60C2E8F622FAADBC0EEAE07B91DD9F508BF21FB1BC146C883ECC00D013A02C993" />
+					<Bitmap Name="Aliases.mspaint.wndNetUIToolWindowLayered.popup_menu.pane" Data="61717A69700000000100000042020000780173F275626200032720A901C40250CC0864318364A0F220261CD430303C004ACA0305E46B08411D49ECD057564712A4F766D0FD7208DC5FBEBF1804E7E5CFCBAECBAE4B4797BF5F0E53313F7F5E7E5D365CBE1AA2FF5EB9403A5BBE7B7521D00C900A847C8D9B6DF2DEA05F96C9510BF214EA15AAF7825520E4E3EDF67BD99B498B9E496A4863A856A82F05BB0326FFBFFA5ED07CA7783B1BC9C941CB927CCBB3AB0BC02E41C8CF2F9EEFB5DFEDAFA1747CA6D301AB04F7E75EFB802AE0F2F5FFAB3DABCE577955B9C566DA2D30737077708E48BF8F2C5FBFBE2AB36E51ED8184BEA0042305FB06EFF7C05041D25F1F51AD56C75AC790AB17B7C66B7AF6D66CA36854F97FF5C2D5E7EBF2CAA28AEF5743218AFEFFF55058FD1F265F0D33FF6610760891C71FBF009908E47C" />
+					<Bitmap Name="Aliases.mspaint.wndNetUIToolWindowLayered.popup_menu.pane.client" Data="61717A69700000000100000042020000780173F275626200032720A901C40250CC0864318364A0F220261CD430303C004ACA0305E46B08411D49ECD057564712A4F766D0FD7208DC5FBEBF1804E7E5CFCBAECBAE4B4797BF5F0E53313F7F5E7E5D365CBE1AA2FF5EB9403A5BBE7B7521D00C900A847C8D9B6DF2DEA05F96C9510BF214EA15AAF7825520E4E3EDF67BD99B498B9E496A4863A856A82F05BB0326FFBFFA5ED07CA7783B1BC9C941CB927CCBB3AB0BC02E41C8CF2F9EEFB5DFEDAFA1747CA6D301AB04F7E75EFB802AE0F2F5FFAB3DABCE577955B9C566DA2D30737077708E48BF8F2C5FBFBE2AB36E51ED8184BEA0042305FB06EFF7C05041D25F1F51AD56C75AC790AB17B7C66B7AF6D66CA36854F97FF5C2D5E7EBF2CAA28AEF5743218AFEFFF55058FD1F265F0D33FF6610760891C71FBF009908E47C" />
+					<Bitmap Name="Aliases.mspaint.wndMSPaintApp.UIRibbonDockTop" Data="61717A69700000000100000042020000780173F275626200032720A901C40250CC0864318364A0F220261CD430303C004ACA0305E46B88813A92E81055D734AFA86CAB74CB6489F8EF7153FC049D7424D1E5ABB3112ABE47C14C83A99AE655935F9D0F53F1234E47725E7E5D36C294695E7B8BE7144355A44B26EB48EE2F9E978F2C3FCD0B1982E4F71723E441F64CF3FA5FFFBFFA3E0896DF2FDF5F8E551E49C5FD72887E985BA779ED2F9E9F3F2FBB2EBD2E3D2E190421F24073C1A6EE75BBE7B5CF6D9E5DAD55AC91AD9EAC96AC969511B2BD7BDD4070AE1350DE0C24FF4735C60C2E8F622FAADBC0EEAE07B91DD9F508BF21FB1BC146C883ECC00D013A02C993" />
+				</NodeBitmaps>
+			</Extenders>
+		</Data>
+		<Children>
+			<Operation Type="{EEDC9229-5F2A-4450-980E-7EB218C67090}">
+				<Data LangId="{897793E3-73F3-4895-A956-3D41D3A24A45}">
+					<Root Type="1" Operator="5">
+						<Left DefVarType="0" ParamType="{2B146992-A675-4CF3-9B71-7EE4A1CA11B2}" Expression="aqConvert.StrToInt(aqString.GetChar(Sys.OSInfo.Version, 0) + aqString.GetChar(Sys.OSInfo.Version, 2))" />
+						<Right DefVarType="0" VarType="3" ValueType="1" ValueValue="60" />
+					</Root>
+				</Data>
+				<Children>
+					<Operation Type="{BFB3C418-1303-46B3-9B24-3624AB5EB529}">
+						<Data Description="Posts a warning to the test log." MessageType="2">
+							<Parameters LangId="{897793E3-73F3-4895-A956-3D41D3A24A45}">
+								<Parameter Name="Str" DefVarType="12" VarType="8" ValueType="6" ValueValue="This sample work only under Windows7 and later versions of Windows" />
+								<Parameter Name="StrEx" DefVarType="12" VarType="8" ValueType="6" ValueValue="" />
+								<Parameter Name="Priority" DefVarType="12" DefValueType="1" DefValueValue="300" VarType="3" ValueType="1" ValueValue="300" />
+								<Parameter Name="Attrib" DefVarType="12" VarType="12" ValueType="0" ValueValue="0" />
+								<Parameter Name="Picture" DefVarType="12" VarType="12" ValueType="0" ValueValue="0" />
+								<Parameter Name="FolderId" DefVarType="3" DefValueType="1" DefValueValue="-1" VarType="3" ValueType="1" ValueValue="-1" />
+							</Parameters>
+						</Data>
+					</Operation>
+					<Operation Type="{792A19F3-4764-463F-B326-ECE40D9596DB}">
+						<Data Description="Stops running the project tests and posts the specified error string to the log.">
+							<Parameters LangId="{897793E3-73F3-4895-A956-3D41D3A24A45}">
+								<Parameter Name="CurrentTestOnly" DefVarType="0" DefValueType="7" DefValueValue="False" VarType="11" ValueType="7" ValueValue="False" />
+								<Parameter Name="ErrorMessage" DefVarType="0" DefValueType="6" DefValueValue="" VarType="8" ValueType="6" ValueValue="" />
+							</Parameters>
+						</Data>
+					</Operation>
+				</Children>
+			</Operation>
+			<Operation Type="{66F32D5F-A5DB-420E-9CB4-3DB7CADE2692}">
+				<Data Description="Runs the &quot;mspaint&quot; tested application." TestedApp="mspaint">
+					<Parameters LangId="{897793E3-73F3-4895-A956-3D41D3A24A45}">
+						<Parameter Name="Count" DefVarType="3" DefValueType="1" DefValueValue="-1" VarType="3" ValueType="1" ValueValue="-1" />
+						<Parameter Name="IgnoreRunning" DefVarType="11" DefValueType="7" DefValueValue="False" VarType="11" ValueType="7" ValueValue="False" />
+						<Parameter Name="Timeout" DefVarType="3" DefValueType="1" DefValueValue="-1" VarType="3" ValueType="1" ValueValue="-1" />
+					</Parameters>
+				</Data>
+			</Operation>
+			<Operation Type="{180A2D9C-07CF-406C-A3AD-F5F88281A719}">
+				<Data Description="True if the object exists in the system; else, false." Action="Exists" InvokeKind="1" Process="mspaint" Index="1" />
+			</Operation>
+			<Operation Type="{EEDC9229-5F2A-4450-980E-7EB218C67090}">
+				<Data LangId="{897793E3-73F3-4895-A956-3D41D3A24A45}">
+					<Root Type="1" Operator="0">
+						<Left DefVarType="0" ParamType="{D44DB91E-FD74-4F67-BE3D-951A1238A9AD}" />
+						<Right DefVarType="0" VarType="11" ValueType="7" ValueValue="False" />
+					</Root>
+				</Data>
+				<Children>
+					<Operation Type="{792A19F3-4764-463F-B326-ECE40D9596DB}">
+						<Data Description="Stops running the project tests and posts the specified error string to the log.">
+							<Parameters LangId="{897793E3-73F3-4895-A956-3D41D3A24A45}">
+								<Parameter Name="CurrentTestOnly" DefVarType="0" DefValueType="7" DefValueValue="False" VarType="11" ValueType="7" ValueValue="False" />
+								<Parameter Name="ErrorMessage" DefVarType="0" DefValueType="6" DefValueValue="" VarType="8" ValueType="9" ValueValue="540068006500200022004D0053005000610069006E00740022002000700072006F006300650073007300200077006100730020006E006F007400200066006F0075006E0064002E000D000A004D0061006B0065002000730075007200650020007400680065002000700061007400680020007700610073002000730070006500630069006600690065006400200063006F00720072006500630074006C007900200069006E00200074006800650020006C0069007300740020006F006600200074006500730074006500640020006100700070006C00690063006100740069006F006E0073002E00" />
+							</Parameters>
+						</Data>
+					</Operation>
+				</Children>
+			</Operation>
+			<Operation Type="{575D0372-CCEB-4D0F-AFE8-D2004F108913}">
+				<Data Description="Maximizes the specified Window object." Action="Maximize">
+					<ObjectSyntax LangId="{897793E3-73F3-4895-A956-3D41D3A24A45}" Code="Aliases.mspaint.wndMSPaintApp" />
+				</Data>
+			</Operation>
+			<Operation Type="{575D0372-CCEB-4D0F-AFE8-D2004F108913}">
+				<Data Description="Clicks the &apos;grid_drop_down_button_Application_menu&apos; control." DescriptionEdited="True" Action="Click">
+					<Parameters LangId="{897793E3-73F3-4895-A956-3D41D3A24A45}">
+						<Parameter Name="ClientX" DefVarType="3" DefValueType="1" DefValueValue="-1" VarType="3" ValueType="1" ValueValue="-1" />
+						<Parameter Name="ClientY" DefVarType="3" DefValueType="1" DefValueValue="-1" VarType="3" ValueType="1" ValueValue="-1" />
+						<Parameter Name="Shift" DefVarType="12" DefValueType="1" DefValueValue="0" VarType="3" ValueType="1" ValueValue="0" />
+					</Parameters>
+					<ObjectSyntax LangId="{897793E3-73F3-4895-A956-3D41D3A24A45}" Code="Aliases.mspaint.wndMSPaintApp.UIRibbonDockTop.Ribbon.Ribbon.NUIPane.property_page_Ribbon.push_button.grid_drop_down_button_Application_menu" />
+				</Data>
+			</Operation>
+			<Operation Type="{575D0372-CCEB-4D0F-AFE8-D2004F108913}">
+				<Data Description="Clicks the &apos;mi_New&apos; control." DescriptionEdited="True" Action="Click">
+					<Parameters LangId="{897793E3-73F3-4895-A956-3D41D3A24A45}">
+						<Parameter Name="ClientX" DefVarType="3" DefValueType="1" DefValueValue="-1" VarType="3" ValueType="1" ValueValue="-1" />
+						<Parameter Name="ClientY" DefVarType="3" DefValueType="1" DefValueValue="-1" VarType="3" ValueType="1" ValueValue="-1" />
+						<Parameter Name="Shift" DefVarType="12" DefValueType="1" DefValueValue="0" VarType="3" ValueType="1" ValueValue="0" />
+					</Parameters>
+					<ObjectSyntax LangId="{897793E3-73F3-4895-A956-3D41D3A24A45}" Code="Aliases.mspaint.wndNetUIToolWindowLayered.popup_menu.pane.client.grouping.mi_New" />
+				</Data>
+			</Operation>
+			<Operation Type="{A41774FA-ACCE-483C-B514-F3AA3A8769B3}">
+				<Data>
+					<ObjectSyntax LangId="{897793E3-73F3-4895-A956-3D41D3A24A45}" Code="Aliases.mspaint.dlgPaint" />
+				</Data>
+				<Children>
+					<Operation Type="{575D0372-CCEB-4D0F-AFE8-D2004F108913}">
+						<Data Description="Simulates one or several keypresses." Action="Keys" InvokeKind="-1">
+							<Parameters LangId="{897793E3-73F3-4895-A956-3D41D3A24A45}">
+								<Parameter Name="Keys" DefVarType="8" VarType="8" ValueType="6" ValueValue="n" />
+							</Parameters>
+							<ObjectSyntax LangId="{897793E3-73F3-4895-A956-3D41D3A24A45}" Code="Aliases.mspaint.dlgPaint" />
+						</Data>
+					</Operation>
+				</Children>
+			</Operation>
+			<Operation Type="{575D0372-CCEB-4D0F-AFE8-D2004F108913}">
+				<Data Description="Clicks the &apos;grid_drop_down_button_Application_menu&apos; control." DescriptionEdited="True" Action="Click">
+					<Parameters LangId="{897793E3-73F3-4895-A956-3D41D3A24A45}">
+						<Parameter Name="ClientX" DefVarType="3" DefValueType="1" DefValueValue="-1" VarType="3" ValueType="1" ValueValue="-1" />
+						<Parameter Name="ClientY" DefVarType="3" DefValueType="1" DefValueValue="-1" VarType="3" ValueType="1" ValueValue="-1" />
+						<Parameter Name="Shift" DefVarType="12" DefValueType="1" DefValueValue="0" VarType="3" ValueType="1" ValueValue="0" />
+					</Parameters>
+					<ObjectSyntax LangId="{897793E3-73F3-4895-A956-3D41D3A24A45}" Code="Aliases.mspaint.wndMSPaintApp.UIRibbonDockTop.Ribbon.Ribbon.NUIPane.property_page_Ribbon.push_button.grid_drop_down_button_Application_menu" />
+				</Data>
+			</Operation>
+			<Operation Type="{575D0372-CCEB-4D0F-AFE8-D2004F108913}">
+				<Data Description="Clicks the &apos;mi_Properties&apos; control." DescriptionEdited="True" Action="Click">
+					<Parameters LangId="{897793E3-73F3-4895-A956-3D41D3A24A45}">
+						<Parameter Name="ClientX" DefVarType="3" DefValueType="1" DefValueValue="-1" VarType="3" ValueType="1" ValueValue="-1" />
+						<Parameter Name="ClientY" DefVarType="3" DefValueType="1" DefValueValue="-1" VarType="3" ValueType="1" ValueValue="-1" />
+						<Parameter Name="Shift" DefVarType="12" DefValueType="1" DefValueValue="0" VarType="3" ValueType="1" ValueValue="0" />
+					</Parameters>
+					<ObjectSyntax LangId="{897793E3-73F3-4895-A956-3D41D3A24A45}" Code="Aliases.mspaint.wndNetUIToolWindowLayered.popup_menu.pane.client.grouping1.mi_Properties" />
+				</Data>
+			</Operation>
+			<Operation Type="{575D0372-CCEB-4D0F-AFE8-D2004F108913}">
+				<Data Description="Contents of the edit control, as text string." Action="wText" InvokeKind="2">
+					<Parameters LangId="{897793E3-73F3-4895-A956-3D41D3A24A45}">
+						<Parameter Name="wText" DefVarType="8" VarType="8" ValueType="6" ValueValue="800" />
+					</Parameters>
+					<ObjectSyntax LangId="{897793E3-73F3-4895-A956-3D41D3A24A45}" Code="Aliases.mspaint.dlgImageProperties.Edit" />
+				</Data>
+			</Operation>
+			<Operation Type="{575D0372-CCEB-4D0F-AFE8-D2004F108913}">
+				<Data Description="Contents of the edit control, as text string." Action="wText" InvokeKind="2">
+					<Parameters LangId="{897793E3-73F3-4895-A956-3D41D3A24A45}">
+						<Parameter Name="wText" DefVarType="8" VarType="8" ValueType="6" ValueValue="600" />
+					</Parameters>
+					<ObjectSyntax LangId="{897793E3-73F3-4895-A956-3D41D3A24A45}" Code="Aliases.mspaint.dlgImageProperties.Edit1" />
+				</Data>
+			</Operation>
+			<Operation Type="{575D0372-CCEB-4D0F-AFE8-D2004F108913}">
+				<Data Description="Clicks the &apos;btnOK&apos; button." DescriptionEdited="True" Action="ClickButton">
+					<ObjectSyntax LangId="{897793E3-73F3-4895-A956-3D41D3A24A45}" Code="Aliases.mspaint.dlgImageProperties.btnOK" />
+				</Data>
+			</Operation>
+			<Operation Type="{E8089E1C-53BC-4D9C-A69D-7CDDB49422CB}">
+				<Data Description="Runs a keyword test." TestName="KeywordTests_SelectColor">
+					<Parameters LangId="{897793E3-73F3-4895-A956-3D41D3A24A45}">
+						<Parameter Name="R" DefVarType="3" DefValueType="1" DefValueValue="0" VarType="3" ValueType="1" ValueValue="0" />
+						<Parameter Name="G" DefVarType="3" DefValueType="1" DefValueValue="0" VarType="3" ValueType="1" ValueValue="0" />
+						<Parameter Name="B" DefVarType="3" DefValueType="1" DefValueValue="0" VarType="3" ValueType="1" ValueValue="0" />
+					</Parameters>
+				</Data>
+			</Operation>
+			<Operation Type="{575D0372-CCEB-4D0F-AFE8-D2004F108913}">
+				<Data Description="Clicks the &apos;btn_Fill_with_color&apos; control." DescriptionEdited="True" Action="ClickButton">
+					<ObjectSyntax LangId="{897793E3-73F3-4895-A956-3D41D3A24A45}" Code="Aliases.mspaint.wndMSPaintApp.UIRibbonDockTop.Ribbon.Ribbon.NUIPane.property_page_Ribbon.pane_Lower_Ribbon.client.property_page_Home.tb_Tools.btn_Fill_with_color" />
+				</Data>
+			</Operation>
+			<Operation Type="{575D0372-CCEB-4D0F-AFE8-D2004F108913}">
+				<Data Description="Clicks at point (70, 49) of the &apos;Afx&apos; object." DescriptionEdited="True" Action="Click">
+					<Parameters LangId="{897793E3-73F3-4895-A956-3D41D3A24A45}">
+						<Parameter Name="ClientX" DefVarType="3" DefValueType="1" DefValueValue="-1" VarType="3" ValueType="1" ValueValue="70" />
+						<Parameter Name="ClientY" DefVarType="3" DefValueType="1" DefValueValue="-1" VarType="3" ValueType="1" ValueValue="49" />
+						<Parameter Name="Shift" DefVarType="12" DefValueType="1" DefValueValue="0" VarType="3" ValueType="1" ValueValue="0" />
+					</Parameters>
+					<ObjectSyntax LangId="{897793E3-73F3-4895-A956-3D41D3A24A45}" Code="Aliases.mspaint.wndMSPaintApp.MSPaintView.Afx" />
+				</Data>
+			</Operation>
+			<Operation Type="{575D0372-CCEB-4D0F-AFE8-D2004F108913}">
+				<Data Description="Clicks the &apos;btn_Text&apos; control." DescriptionEdited="True" Action="ClickButton">
+					<ObjectSyntax LangId="{897793E3-73F3-4895-A956-3D41D3A24A45}" Code="Aliases.mspaint.wndMSPaintApp.UIRibbonDockTop.Ribbon.Ribbon.NUIPane.property_page_Ribbon.pane_Lower_Ribbon.client.property_page_Home.tb_Tools.btn_Text" />
+				</Data>
+			</Operation>
+			<Operation Type="{E8089E1C-53BC-4D9C-A69D-7CDDB49422CB}">
+				<Data Description="Runs a keyword-driven test." TestName="KeywordTests_SelectColor">
+					<Parameters LangId="{897793E3-73F3-4895-A956-3D41D3A24A45}">
+						<Parameter Name="R" DefVarType="12" VarType="3" ValueType="1" ValueValue="128" />
+						<Parameter Name="G" DefVarType="12" VarType="3" ValueType="1" ValueValue="128" />
+						<Parameter Name="B" DefVarType="12" VarType="3" ValueType="1" ValueValue="128" />
+					</Parameters>
+				</Data>
+			</Operation>
+			<Operation Type="{E8089E1C-53BC-4D9C-A69D-7CDDB49422CB}">
+				<Data Description="Enlarge the edit box after changing the font size" DescriptionEdited="True" TestName="KeywordTests_DrawString">
+					<Parameters LangId="{897793E3-73F3-4895-A956-3D41D3A24A45}">
+						<Parameter Name="X" DefVarType="3" VarType="3" ValueType="1" ValueValue="150" />
+						<Parameter Name="Y" DefVarType="3" VarType="3" ValueType="1" ValueValue="150" />
+						<Parameter Name="Str" DefVarType="8" VarType="8" ValueType="6" ValueValue=" " />
+					</Parameters>
+				</Data>
+			</Operation>
+			<Operation Type="{E8089E1C-53BC-4D9C-A69D-7CDDB49422CB}">
+				<Data Description="Shade for T" DescriptionEdited="True" TestName="KeywordTests_DrawString">
+					<Parameters LangId="{897793E3-73F3-4895-A956-3D41D3A24A45}">
+						<Parameter Name="X" DefVarType="3" VarType="3" ValueType="1" ValueValue="152" />
+						<Parameter Name="Y" DefVarType="3" VarType="3" ValueType="1" ValueValue="152" />
+						<Parameter Name="Str" DefVarType="8" VarType="8" ValueType="6" ValueValue="T" />
+					</Parameters>
+				</Data>
+			</Operation>
+			<Operation Type="{E8089E1C-53BC-4D9C-A69D-7CDDB49422CB}">
+				<Data Description="Shade for E" DescriptionEdited="True" TestName="KeywordTests_DrawString">
+					<Parameters LangId="{897793E3-73F3-4895-A956-3D41D3A24A45}">
+						<Parameter Name="X" DefVarType="3" VarType="3" ValueType="1" ValueValue="252" />
+						<Parameter Name="Y" DefVarType="3" VarType="3" ValueType="1" ValueValue="152" />
+						<Parameter Name="Str" DefVarType="8" VarType="8" ValueType="6" ValueValue="E" />
+					</Parameters>
+				</Data>
+			</Operation>
+			<Operation Type="{E8089E1C-53BC-4D9C-A69D-7CDDB49422CB}">
+				<Data Description="Shade for S" DescriptionEdited="True" TestName="KeywordTests_DrawString">
+					<Parameters LangId="{897793E3-73F3-4895-A956-3D41D3A24A45}">
+						<Parameter Name="X" DefVarType="3" VarType="3" ValueType="1" ValueValue="352" />
+						<Parameter Name="Y" DefVarType="3" VarType="3" ValueType="1" ValueValue="152" />
+						<Parameter Name="Str" DefVarType="8" VarType="8" ValueType="6" ValueValue="S" />
+					</Parameters>
+				</Data>
+			</Operation>
+			<Operation Type="{E8089E1C-53BC-4D9C-A69D-7CDDB49422CB}">
+				<Data Description="Shade for T" DescriptionEdited="True" TestName="KeywordTests_DrawString">
+					<Parameters LangId="{897793E3-73F3-4895-A956-3D41D3A24A45}">
+						<Parameter Name="X" DefVarType="3" VarType="3" ValueType="1" ValueValue="452" />
+						<Parameter Name="Y" DefVarType="3" VarType="3" ValueType="1" ValueValue="152" />
+						<Parameter Name="Str" DefVarType="8" VarType="8" ValueType="6" ValueValue="T" />
+					</Parameters>
+				</Data>
+			</Operation>
+			<Operation Type="{E8089E1C-53BC-4D9C-A69D-7CDDB49422CB}">
+				<Data Description="Runs a keyword-driven test." TestName="KeywordTests_SelectColor">
+					<Parameters LangId="{897793E3-73F3-4895-A956-3D41D3A24A45}">
+						<Parameter Name="R" DefVarType="12" VarType="3" ValueType="1" ValueValue="255" />
+						<Parameter Name="G" DefVarType="12" VarType="3" ValueType="1" ValueValue="0" />
+						<Parameter Name="B" DefVarType="12" VarType="3" ValueType="1" ValueValue="0" />
+					</Parameters>
+				</Data>
+			</Operation>
+			<Operation Type="{E8089E1C-53BC-4D9C-A69D-7CDDB49422CB}">
+				<Data Description="T" DescriptionEdited="True" TestName="KeywordTests_DrawString">
+					<Parameters LangId="{897793E3-73F3-4895-A956-3D41D3A24A45}">
+						<Parameter Name="X" DefVarType="3" VarType="3" ValueType="1" ValueValue="150" />
+						<Parameter Name="Y" DefVarType="3" VarType="3" ValueType="1" ValueValue="150" />
+						<Parameter Name="Str" DefVarType="8" VarType="8" ValueType="6" ValueValue="T" />
+					</Parameters>
+				</Data>
+			</Operation>
+			<Operation Type="{E8089E1C-53BC-4D9C-A69D-7CDDB49422CB}">
+				<Data Description="Runs a keyword-driven test." TestName="KeywordTests_SelectColor">
+					<Parameters LangId="{897793E3-73F3-4895-A956-3D41D3A24A45}">
+						<Parameter Name="R" DefVarType="12" VarType="3" ValueType="1" ValueValue="0" />
+						<Parameter Name="G" DefVarType="12" VarType="3" ValueType="1" ValueValue="0" />
+						<Parameter Name="B" DefVarType="12" VarType="3" ValueType="1" ValueValue="255" />
+					</Parameters>
+				</Data>
+			</Operation>
+			<Operation Type="{E8089E1C-53BC-4D9C-A69D-7CDDB49422CB}">
+				<Data Description="E" DescriptionEdited="True" TestName="KeywordTests_DrawString">
+					<Parameters LangId="{897793E3-73F3-4895-A956-3D41D3A24A45}">
+						<Parameter Name="X" DefVarType="3" VarType="3" ValueType="1" ValueValue="250" />
+						<Parameter Name="Y" DefVarType="3" VarType="3" ValueType="1" ValueValue="150" />
+						<Parameter Name="Str" DefVarType="8" VarType="8" ValueType="6" ValueValue="E" />
+					</Parameters>
+				</Data>
+			</Operation>
+			<Operation Type="{E8089E1C-53BC-4D9C-A69D-7CDDB49422CB}">
+				<Data Description="Runs a keyword-driven test." TestName="KeywordTests_SelectColor">
+					<Parameters LangId="{897793E3-73F3-4895-A956-3D41D3A24A45}">
+						<Parameter Name="R" DefVarType="12" VarType="3" ValueType="1" ValueValue="0" />
+						<Parameter Name="G" DefVarType="12" VarType="3" ValueType="1" ValueValue="255" />
+						<Parameter Name="B" DefVarType="12" VarType="3" ValueType="1" ValueValue="0" />
+					</Parameters>
+				</Data>
+			</Operation>
+			<Operation Type="{E8089E1C-53BC-4D9C-A69D-7CDDB49422CB}">
+				<Data Description="S" DescriptionEdited="True" TestName="KeywordTests_DrawString">
+					<Parameters LangId="{897793E3-73F3-4895-A956-3D41D3A24A45}">
+						<Parameter Name="X" DefVarType="3" VarType="3" ValueType="1" ValueValue="350" />
+						<Parameter Name="Y" DefVarType="3" VarType="3" ValueType="1" ValueValue="150" />
+						<Parameter Name="Str" DefVarType="8" VarType="8" ValueType="6" ValueValue="S" />
+					</Parameters>
+				</Data>
+			</Operation>
+			<Operation Type="{E8089E1C-53BC-4D9C-A69D-7CDDB49422CB}">
+				<Data Description="Runs a keyword-driven test." TestName="KeywordTests_SelectColor">
+					<Parameters LangId="{897793E3-73F3-4895-A956-3D41D3A24A45}">
+						<Parameter Name="R" DefVarType="12" VarType="3" ValueType="1" ValueValue="255" />
+						<Parameter Name="G" DefVarType="12" VarType="3" ValueType="1" ValueValue="0" />
+						<Parameter Name="B" DefVarType="12" VarType="3" ValueType="1" ValueValue="255" />
+					</Parameters>
+				</Data>
+			</Operation>
+			<Operation Type="{E8089E1C-53BC-4D9C-A69D-7CDDB49422CB}">
+				<Data Description="T" DescriptionEdited="True" TestName="KeywordTests_DrawString">
+					<Parameters LangId="{897793E3-73F3-4895-A956-3D41D3A24A45}">
+						<Parameter Name="X" DefVarType="3" VarType="3" ValueType="1" ValueValue="450" />
+						<Parameter Name="Y" DefVarType="3" VarType="3" ValueType="1" ValueValue="150" />
+						<Parameter Name="Str" DefVarType="8" VarType="8" ValueType="6" ValueValue="T" />
+					</Parameters>
+				</Data>
+			</Operation>
+			<Operation Type="{575D0372-CCEB-4D0F-AFE8-D2004F108913}">
+				<Data Description="Closes the specified Window object." Action="Close">
+					<Parameters LangId="{897793E3-73F3-4895-A956-3D41D3A24A45}">
+						<Parameter Name="WaitTimeout" DefVarType="3" DefValueType="1" DefValueValue="2000" VarType="3" ValueType="1" ValueValue="2000" />
+					</Parameters>
+					<ObjectSyntax LangId="{897793E3-73F3-4895-A956-3D41D3A24A45}" Code="Aliases.mspaint.wndMSPaintApp" />
+				</Data>
+			</Operation>
+			<Operation Type="{575D0372-CCEB-4D0F-AFE8-D2004F108913}">
+				<Data Description="Simulates one or several keypresses." Action="Keys">
+					<Parameters LangId="{897793E3-73F3-4895-A956-3D41D3A24A45}">
+						<Parameter Name="Keys" DefVarType="8" VarType="8" ValueType="6" ValueValue="n" />
+					</Parameters>
+					<ObjectSyntax LangId="{897793E3-73F3-4895-A956-3D41D3A24A45}" Code="Sys" />
+				</Data>
+			</Operation>
+		</Children>
+	</TestData>
+	<Variables Version="3" Key="{4C3FF679-7610-4DC1-A402-0C7392FCB172}" />
+	<Parameters Key="{74E368B5-82F2-4176-8560-45186E531E7E}" />
+</Root>

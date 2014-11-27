@@ -1,0 +1,242 @@
+/*
+  The example demonstrates the main operations that can be executed over objects: 
+  clicks, dragging, key presses.
+  The sample works only under the English version of Windows.
+*/
+
+function DrawString(wMain, x, y, strDraw, strFontName)
+{
+  var wndFonts, wPicture, wFonts;
+  wPicture = wMain["Window"]("AfxFrameOrView*", "", 1)["Window"]("Afx*:8", "");
+  wPicture["Drag"](x, y, 100, 100);
+  
+  wFonts = wMain["Parent"]["Window"]("Afx*", "Fonts")["Window"]("#*", "");
+  if (!wFonts["Exists"] || !wFonts["VisibleOnScreen"])
+	  wMain["MainMenu"]["Check"]("View|Text Toolbar", true);
+	
+	wndFonts = wMain["Parent"]["WaitWindow"]("Afx*:8*", "Fonts");
+	if (wndFonts["Exists"]) 
+  	wndFonts["Position"](60, 40, wndFonts.Width, wndFonts.Height);
+
+  if (wFonts["Window"]("ComboBox", "", 1)["wText"] != strFontName)
+    wFonts["Window"]("ComboBox", "", 1)["ClickItem"](strFontName);
+  if (wFonts["Window"]("ComboBox", "", 2)["wText"] != "72") 
+    wFonts["Window"]("ComboBox", "", 2)["ClickItem"]("72");
+  wPicture["Window"]("AfxWnd*", "")["Window"]("Edit")["Keys"](strDraw);
+  wPicture["Click"](x - 5, y - 5);
+}
+
+function DrawString_w7(wPicture, wRibbon, x, y, strDraw, strFontName)
+{
+  var wPropertyPage, wToolBar, wEdit;
+  wPicture["Click"](x, y);
+  wPropertyPage = wRibbon["Pane"]("Lower Ribbon")["Client"](0)["PropertyPage"]("Text");
+  wToolBar = wPropertyPage["ToolBar"]("Font");
+  
+  if (wToolBar.ComboBox("Font family")["Edit"]("*")["Text"] != strFontName)
+  {  
+    wToolBar["ComboBox"]("Font family")["Button"]("Open")["Click"](7, 9);
+    wToolBar["ComboBox"]("Font family")["Button"]("Close")["Click"](7, 9);
+    wEdit = wPicture["Parent"]["Parent"]["Window"]("UIRibbonCommandBarDock", "UIRibbonDockTop")["Window"]("UIRibbonCommandBar", "Ribbon")["Window"]("UIRibbonWorkPane", "Ribbon")["Window"]("NUIPane")["PropertyPage"]("Ribbon")["Window"]("NetUICtrlNotifySink", "", 1)["Window"]("RICHEDIT50W");
+    wEdit["Click"]();
+    wEdit["wText"] = strFontName;
+    wEdit["Keys"]("[Enter]");
+  }
+  if (wToolBar["ComboBox"]("Font size")["Edit"]("*")["Text"] != "72")
+  { 
+    wToolBar["ComboBox"]("Font size")["Button"]("Open")["Click"](8, 9);
+    wToolBar["ComboBox"]("Font size")["Button"]("Close")["Click"](7, 9);
+    wEdit = wPicture["Parent"]["Parent"]["Window"]("UIRibbonCommandBarDock", "UIRibbonDockTop")["Window"]("UIRibbonCommandBar", "Ribbon")["Window"]("UIRibbonWorkPane", "Ribbon")["Window"]("NUIPane")["PropertyPage"]("Ribbon")["Window"]("NetUICtrlNotifySink", "", 2)["Window"]("RICHEDIT50W");
+    wEdit["Click"]();
+    wEdit["wText"] = "72";  
+    wEdit["Keys"]("[Enter]");
+  }
+    
+  wToolBar = wPropertyPage["ToolBar"]("Background");
+  wToolBar["Button"]("Transparent")["ClickButton"]();
+  
+  wPicture["Window"]("AfxWnd42u")["Window"]("RICHEDIT50W")["Keys"](strDraw);  
+  wPicture["Click"](x - 15, y);
+}
+
+function SetColor(Paint, r, g, b, w7)
+{
+  var dlgEditColors;
+
+  if (w7)
+    Paint["Window"]("MSPaintApp", "*")["Window"]("UIRibbonCommandBarDock", "UIRibbonDockTop")["Window"]("UIRibbonCommandBar", "Ribbon")["Window"]("UIRibbonWorkPane", "Ribbon")["Window"]("NUIPane")["PropertyPage"]("Ribbon")["Pane"]("Lower Ribbon")["Client"](0)["PropertyPage"]("Home")["ToolBar"]("Colors")["Button"]("Edit colors")["ClickButton"]();
+  else
+    Paint["Window"]("MSPaintApp", "*")["MainMenu"]["Click"]("Colors|Edit Colors...");
+        
+  dlgEditColors = Paint["Window"]("#32770", "Edit Colors");
+  if (dlgEditColors["Window"]("Button", "&Define Custom Colors >>")["Enabled"])  
+    dlgEditColors["Window"]("Button", "&Define Custom Colors >>")["ClickButton"]();
+  dlgEditColors["Window"]("Edit", "", 4)["wText"] = r;
+  dlgEditColors["Window"]("Edit", "", 5)["wText"] = g;
+  dlgEditColors["Window"]("Edit", "", 6)["wText"] = b;
+  dlgEditColors["Window"]("Button", "OK")["ClickButton"]();
+}
+
+function Hello_w7(mspaint)
+{
+  var wMain, wRibbon, wDialog, wColors, wTools, wPicture, strFontName;
+
+  strFontName = "Arial";
+  wMain   = mspaint["WaitWindow"]("MSPaintApp", "*", 1, 5000);
+  
+  // Create a new image 800x600
+  wMain["Maximize"]();
+  wRibbon = wMain["Window"]("UIRibbonCommandBarDock", "UIRibbonDockTop")["Window"]("UIRibbonCommandBar", "Ribbon")["Window"]("UIRibbonWorkPane", "Ribbon")["Window"]("NUIPane")["PropertyPage"]("Ribbon");
+  wRibbon["Button"](1)["GridDropDownButton"]("Application menu")["Click"]();
+  mspaint["Window"]("Net UI Tool Window Layered")["Window"]("NetUIHWND")["Pane"](0)["Client"](0)["Grouping"](0)["MenuItem"]("New")["Click"]();
+
+  wDialog = mspaint["WaitWindow"]("#*", "*", 1, 2000);
+  if (wDialog["Exists"])
+    wDialog["Keys"]("n");
+  
+  wRibbon["Button"](1)["GridDropDownButton"]("Application menu")["Click"]();
+  mspaint["Window"]("Net UI Tool Window Layered")["Window"]("NetUIHWND")["Pane"](0)["Client"](0)["Grouping"](3)["MenuItem"]("Properties")["Click"]();
+  wDialog = mspaint["Window"]("#32770", "Image Properties");
+  wDialog["Window"]("Button", "&Pixels")["ClickButton"]();
+  wDialog["Window"]("Button", "Co&lor")["ClickButton"]();
+  wDialog["Window"]("Edit", "", 1)["wText"] = 800;
+  wDialog["Window"]("Edit", "", 2)["wText"] = 600;
+  wDialog["Window"]("Button", "OK")["ClickButton"]();
+   
+  wColors = wRibbon["Pane"]("Lower Ribbon")["Client"](0)["PropertyPage"]("Home")["ToolBar"]("Colors")["Grouping"](0);
+  wTools = wRibbon["Pane"]("Lower Ribbon")["Client"](0)["PropertyPage"]("Home")["ToolBar"]("Tools");
+  wPicture = wMain["Window"]("MSPaintView")["Window"]("Afx:*:8");
+  
+  // Background color
+  SetColor(mspaint, 0, 0, 0, true);
+  wTools["Button"]("Fill with color")["ClickButton"]();       
+  wPicture["Click"](10, 10);
+
+  // Choose "Text"
+  wTools["Button"]("Text")["ClickButton"]();       
+
+  // Shade for T - E - S - T
+  SetColor(mspaint, 100, 100, 100, true);
+  DrawString_w7(wPicture, wRibbon, 152, 152, " ", strFontName); // Enlarge the edit box after changing the font size
+  DrawString_w7(wPicture, wRibbon, 152, 152, "T", strFontName);
+  DrawString_w7(wPicture, wRibbon, 252, 152, "E", strFontName);
+  DrawString_w7(wPicture, wRibbon, 352, 152, "S", strFontName);
+  DrawString_w7(wPicture, wRibbon, 452, 152, "T", strFontName);
+  
+  // T - E - S - T
+  SetColor(mspaint, 255, 0, 0, true);
+  DrawString_w7(wPicture, wRibbon, 150, 150, "T", strFontName);
+  SetColor(mspaint, 0, 255, 0, true);
+  DrawString_w7(wPicture, wRibbon, 250, 150, "E", strFontName);
+  SetColor(mspaint, 0, 0, 255, true);
+  DrawString_w7(wPicture, wRibbon, 350, 150, "S", strFontName);
+  SetColor(mspaint, 255, 0, 255, true);
+  DrawString_w7(wPicture, wRibbon, 450, 150, "T", strFontName);
+}
+
+function Hello(mspaint)
+{
+  var wndFonts, bIsOldPaint,
+      bIsWinXP, bIsWinNT, bIsWin2K, bHasToolChild,
+      wColors, wMain, wTools, wPicture,
+      strOSName, strFontName;
+
+  strOSName = Sys["OSInfo"]["Name"];
+  bIsWinNT = strOSName == "WinNT";
+	bIsWin2K = strOSName == "Win2000";
+  bIsWinXP = strOSName == "WinXP";
+	bHasToolChild = bIsWin2K;
+  
+  strFontName = "Arial";
+	wndFonts = mspaint["WaitWindow"]("Afx*:8*", "Fonts");
+	if (wndFonts["Exists"]) 
+  	wndFonts["Position"](60, 40, wndFonts.Width, wndFonts.Height);
+	
+  wMain   = mspaint["WaitWindow"]("MSPaintApp", "*", 1, 5000);
+  wColors = wMain["Window"]("AfxControlBar*", "Colors")["Window"]("AfxWnd*", "Colors");
+  wTools  = wMain["Window"]("AfxControlBar*", "Tools")["Window"]("AfxWnd*", "Tools");
+
+  // Create a new image 800x600
+  wMain["Maximize"]();
+  wMain["MainMenu"]["Check"]("View|Tool Box", true);
+  wMain["MainMenu"]["Check"]("View|Color Box", true);
+   
+  wMain["MainMenu"]["Click"]("File|New");
+  wndFonts = mspaint["WaitWindow"]("#*", "*", 1, 1000);
+  if (wndFonts["Exists"])
+    wndFonts["Keys"]("n");
+	
+  wMain["MainMenu"]["Click"]("Image|Attributes...");
+  wndFonts = mspaint["WaitWindow"]("#*", "Attributes", 1, 2000);
+  if (bIsWinNT)
+    wndFonts["Window"]("Button", "&Pels")["ClickButton"]();
+  else
+    wndFonts["Window"]("Button", "&Pixels")["ClickButton"]();
+  wndFonts["Window"]("Button", "Co&lors")["ClickButton"]();
+  wndFonts["Window"]("Edit", "", 1)["wText"] = "800";
+  wndFonts["Window"]("Edit", "", 2)["wText"] = "600";
+  wndFonts["Window"]("Button", "OK")["ClickButton"]();
+
+  // Background color
+  SetColor(mspaint, 0, 0, 0, false);
+  
+  if (bHasToolChild)
+      wTools["Window"]("ToolChild", "", 4)["Click"](13, 12)
+  else
+      wTools["Click"](43, 36);
+      
+  wMain["Window"]("AfxFrameOrView*", "", 1)["Window"]("Afx*:8", "")["Click"](10, 10);
+  
+  // Choose "Text"
+  if (bHasToolChild)
+      wTools["Window"]("ToolChild", "", 10)["Click"](10, 9);    
+  else
+      wTools["Click"](43, 110);  
+  
+  wTools["Click"](25, 252);
+  
+  // Shade for T - E - S - T
+  SetColor(mspaint, 100, 100, 100, false);
+  DrawString(wMain, 150, 150, " ", strFontName); // Enlarge the edit box after changing the font size
+  
+  DrawString(wMain, 152, 152, "T", strFontName);
+  DrawString(wMain, 252, 152, "E", strFontName);
+  DrawString(wMain, 352, 152, "S", strFontName);
+  DrawString(wMain, 452, 152, "T", strFontName);
+
+  // T - E - S - T
+  SetColor(mspaint, 255, 0, 0, false);
+  DrawString(wMain, 150, 150, "T", strFontName);
+  SetColor(mspaint, 0, 255, 0, false);
+  DrawString(wMain, 250, 150, "E", strFontName);
+  SetColor(mspaint, 0, 0, 255, false);
+  DrawString(wMain, 350, 150, "S", strFontName);
+  SetColor(mspaint, 255, 0, 255, false);
+  DrawString(wMain, 450, 150, "T", strFontName);
+}       
+
+function main()
+{
+  var mspaint;
+
+  // Run the tested application
+  TestedApps["mspaint_NT"]["Run"]();
+  mspaint = Sys["WaitProcess"]("mspaint", 5000);
+
+  if (!mspaint["Exists"])
+  {
+    Log["Error"]("The \"MSPaint\" process was not found.",
+      "Make sure the path was specified correctly in the list of tested applications.");
+	  return;
+  }
+  
+  var OsVersion = aqConvert["StrToInt"](aqString["GetChar"](Sys["OSInfo"]["Version"], 0) + aqString["GetChar"](Sys["OSInfo"]["Version"], 2));
+  if (OsVersion > 60)
+    Hello_w7(mspaint)
+  else
+    Hello(mspaint);
+  
+  mspaint["Close"]();
+  Sys["Keys"]("n");
+  while (mspaint["exists"]) sleep(500);
+}  
