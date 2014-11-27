@@ -1,0 +1,64 @@
+'The script demonstrates integration of TestComplete and AQtime. 
+'The script is used for automatic testing of an application, loaded from AQtime.
+'
+'The script will work only if AQTime 8 is installed on your computer.
+
+Sub Integration
+  AppPath = TestedApps.Orders.FullFileName
+  If AQtimeIntegration.IsSupportedVersionAvailable (8) = true Then
+       Call AQtime.CreateProjectFromModule(AppPath)
+       Call AQtime.SelectProfiler("Coverage Profiler")
+       Call AQtime.StartProfiling
+       Call Test
+       Call AQtime.WaitAndExportResults(Project.Path + "ProfilingResults\SummaryResults.xml", Project.Path + "\ProfilingResults\FullResults.xml")
+       Call AQtime.WaitForEndOfProfiling
+       Call AQtime.Close
+  Else
+       Call Log.Error("You should install AQtime version 8")
+  End If
+End Sub
+
+Sub Test
+  set orders = Sys.Process("Orders")
+  call orders.VCLObject("MainForm").MainMenu.Click("[0]|[1]")
+
+  set edit = orders.Window("#32770", "Open").WaitWindow("Edit")
+  orders.Window("#32770", "Open").Window("ComboBoxEx32").Window("ComboBox").Window(_
+      "Edit").wText = Project.Path + "..\..\Orders\MyTable.tbl"
+  call orders.Window("#32770", "Open", 1).Window("Button", "&Open").ClickButton()	
+
+  set mainForm = orders.VCLObject("MainForm")
+  call mainForm.VCLObject("ListView").ClickItem("Samuel Clemens", 0)
+  call mainForm.VCLObject("ToolButton6").Click(9, 10)
+  
+  set orderFrm = orders.VCLObject("OrderFrm")
+  call orderFrm.VCLObject("Product_ComboBox").ClickItem("FamilyAlbum")
+  set cardNoEdit = orderFrm.VCLObject("CardNo_Edit")
+  call cardNoEdit.DblClick(83, 12)
+  call cardNoEdit.Keys("12456789012")
+  call orderFrm.VCLObject("OKButton").ClickButton
+  
+  call mainForm.MainMenu.Click("Orders|[0]")
+  
+  set orderFrm = orders.VCLObject("OrderFrm")
+  call orderFrm.VCLObject("Product_ComboBox").ClickItem("ScreenSaver")
+  call orderFrm.VCLObject("Qty_Edit").Keys("4")
+  call orderFrm.VCLObject("Date_Edit").SetText(aqConvert.DateTimeToStr(aqDateTime.Today))  
+  call orderFrm.VCLObject("CustomerName_Edit").Keys("John Black")
+  call orderFrm.VCLObject("Street_Edit").Keys("Light street")
+  call orderFrm.VCLObject("City_Edit").Keys("Rain city")
+  call orderFrm.VCLObject("State_Edit").Keys("US")
+  call orderFrm.VCLObject("Zip_Edit").Keys("123456")
+  call orderFrm.VCLObject("AE_RadioButton").ClickButton
+  call orderFrm.VCLObject("CardNo_Edit").Keys("1324354657")
+  call orderFrm.VCLObject("ExpireDate_Edit").SetText(aqConvert.DateTimeToStr(aqDateTime.AddMonths(aqDateTime.Today, 1)))
+  call orderFrm.VCLObject("OKButton").Keys("[Enter]")
+    
+  call mainForm.Close(0)
+  call orders.Window("#32770", "Confirm").Window("Button", "&No").ClickButton
+  
+  ' Waiting until the Orders process is terminated
+  while orders.Exists
+    call BuiltIn.Delay(500)
+  wend
+end Sub
