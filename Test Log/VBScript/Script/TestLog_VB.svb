@@ -1,0 +1,89 @@
+' This example demonstrates how to post messages and images
+' to TestComplete's Test Log.
+
+sub CorrectRGBComponent(byref component)
+  component = aqConvert.VarToInt(component)
+  if (component < 0) then
+    component = 0
+  else
+    if (component > 255) then
+	  component = 255
+    end if
+   end if
+end sub
+
+function RGB(r, g, b)
+  call CorrectRGBComponent(r)
+  call CorrectRGBComponent(g)
+  call CorrectRGBComponent(b)
+  RGB = r + (g * 256) + (b * 65536)
+end function
+
+sub TestLog
+  call Log.Message("A message")
+  call Log.Checkpoint("A checkpoint")
+  call Log.Warning("A warning")
+  call Log.Error("An error")
+  call Log.Event("An event")
+
+  call Log.Message("A message", "An expanded message")
+  call Log.Checkpoint("A checkpoint", "An expanded checkpoint")
+  call Log.Warning("A warning", "An expanded warning")
+  call Log.Error("An error", "An expanded error")
+  call Log.Event("An event", "An expanded event")
+  
+  set oLogAttr = Log.CreateNewAttributes()
+  oLogAttr.Bold = true
+  
+  nFirstFolderID = Log.CreateFolder("First folder", _
+    "Use folders to group similar fragments of log messages")
+  nSecondFolderID = Log.CreateFolder("Second folder", "", _
+    pmLowest, oLogAttr)
+  oLogAttr.Bold = false
+  oLogAttr.Italic = true
+  nChildFolderID = Log.CreateFolder("Another level folder", _
+    "", pmNormal, oLogAttr, nFirstFolderID)
+  
+  call Log.PushLogFolder(nFirstFolderID)
+
+  call Log.Picture(Sys.Desktop.Picture(0, 0, 100, 100), _
+    "Sys.Desktop.Picture(0, 0, 100, 100)")
+  call Log.Picture(Sys.Desktop.PictureUnderMouse(40, 40), _
+    "Sys.Desktop.PictureUnderMouse", "A rectangle with the mouse cursor in the center")
+ 
+  call Log.PushLogFolder(nChildFolderID)
+  	
+  call Log.Message("A message", "A message with priority = pmLowest", pmLowest)
+  call Log.Warning("A warning", "A warning with priority = pmLower", pmLower)
+  call Log.Message("A message", "A message with priority = pmNormal", pmNormal)
+  call Log.Checkpoint("A checkpoint", "A checkpoint with priority = pmLower", pmLower)
+  call Log.Error("An error", "An error with priority = pmHigher", pmHigher)
+  call Log.Event("An event", "An event with priority = pmHighest", pmHighest)
+  
+  call Log.PopLogFolder()
+  call Log.PopLogFolder()
+  
+  call Log.Message("A message", "Priority = 9 (Can be used as a tag)", 9)
+
+  oLogAttr.Italic = false
+  oLogAttr.FontColor = RGB(192, 0, 0)
+  oLogAttr.BackColor = RGB(255, 255, 0)
+  set oImage = Sys.Desktop.Picture()
+  
+  arParams = BuiltIn.CreateVariantArray(0, 0)
+  arParams(0) = Log.ErrCount
+  call Log.Message(Utilities.Format("Error Count = %d", arParams), _
+    "", pmNormal, oLogAttr, oImage, nSecondFolderID)
+  arParams(0) = Log.WrnCount
+  call Log.Message(Utilities.Format("Warning Count = %d", arParams), _
+    "", pmNormal, oLogAttr, oImage, nSecondFolderID)
+  arParams(0) = Log.EvnCount
+  call Log.Message(Utilities.Format("Event Count = %d", arParams), _
+    "", pmNormal, oLogAttr, oImage, nSecondFolderID)
+  arParams(0) = Log.ImgCount
+  call Log.Message(Utilities.Format("Image Count = %d", arParams), _
+    "", pmNormal, oLogAttr, NULL, nSecondFolderID)
+  arParams(0) = Log.MsgCount
+  call Log.Message(Utilities.Format("Message Count = %d", arParams), _
+    "", pmNormal, oLogAttr, NULL, nSecondFolderID)
+end sub
